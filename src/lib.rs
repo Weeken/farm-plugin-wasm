@@ -139,8 +139,8 @@ impl Plugin for FarmPluginWasm {
 
         let code = format!(
           r#"
-            var req = {req};
-            var fallback = function() {{
+            const req = {req};
+            const fallback = function() {{
               return req{FALLBACK_CODE}
             }}
             {STREAMING_CODE}
